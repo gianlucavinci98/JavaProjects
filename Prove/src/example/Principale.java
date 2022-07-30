@@ -1,5 +1,8 @@
 package example;
 
+
+import java.util.Scanner;
+
 //import myListe.ListaInteri;
 
 public class Principale {
@@ -22,6 +25,17 @@ public class Principale {
 		int n = 2678;
 		System.out.println(Palindromo.isPalindromo(n));
 		System.out.println(Palindromo.sommaHard(n));
+		
+		String str = "123 ciao 2.2 4 5";
+		Scanner s = new Scanner(str);
+		
+		int a = s.nextInt();
+		String b = s.next();
+		float c = s.nextFloat();
+		//int d = s.nextInt();
+		System.out.print(a+b+c);
+		
+		s.close();
 	}
 
 }
