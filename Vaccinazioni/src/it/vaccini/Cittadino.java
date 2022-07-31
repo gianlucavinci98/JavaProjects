@@ -28,5 +28,13 @@ public class Cittadino {
 		else return "[" + cf + " - " + nome + " " + cognome + " " + centro.toString() + "]";
 	}
 	
+	public boolean isAssigned()
+	{
+		return this.centro!=null;
+	}
 	
+	public String getIndirizzo()
+	{
+		return nome;
+	}
 }

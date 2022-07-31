@@ -14,14 +14,17 @@ public class Interazioni {
 		sistema.addCentro("lingotto", "via madama");
 		sistema.addCentro("cto", "via carducci");
 		
-		sistema.assegnaCentro("1", "lingotto");
-		sistema.assegnaCentro("2", "lingotto");
-		sistema.assegnaCentro("3", "lingotto");
-		sistema.assegnaCentro("4", "cto");
+//		sistema.assegnaCentro("1", "lingotto");
+//		sistema.assegnaCentro("2", "lingotto");
+//		sistema.assegnaCentro("3", "lingotto");
+//		sistema.assegnaCentro("4", "cto");
+		
+		sistema.assegnazioneAuto();
 		
 		System.out.println(sistema.getCittadini());
 		
 		System.out.println(sistema.cittadiniAssociati("lingotto"));
+		System.out.println(sistema.cittadiniAssociati("cto"));
 	}
 
 }

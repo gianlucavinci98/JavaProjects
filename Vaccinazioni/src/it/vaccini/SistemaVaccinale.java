@@ -68,7 +68,6 @@ public class SistemaVaccinale {
 		
 		return null;
 	}
-	
 	public void assegnaCentro(String cf, String centro)
 	{
 		Cittadino cit = getCit(cf);
@@ -88,6 +87,37 @@ public class SistemaVaccinale {
 	public String cittadiniAssociati(String centro)
 	{
 		return getCentro(centro).getListaCit();
+	}
+	
+	
+	private double calcolaDistanza(String ind1, String ind2)
+	{
+		return Math.random()*100;
+	}
+	public void assegnazioneAuto()
+	{
+		for (Cittadino c : cittadini)
+		{
+			if(c!=null && !c.isAssigned())
+			{
+				CentroVaccinale ctrNearest = null;
+				double distMin = Double.MAX_VALUE;
+				
+				for (CentroVaccinale ctr : centri)
+				{
+					if (ctr!=null) {
+						double d = calcolaDistanza(c.getIndirizzo(), ctr.getIndirizzo());
+						if (d < distMin) {
+							distMin = d;
+							ctrNearest = ctr;
+						} 
+					}
+				}
+				
+				c.setCentro(ctrNearest);
+				ctrNearest.addCittadino(c);
+			}
+		}
 	}
 	
 }

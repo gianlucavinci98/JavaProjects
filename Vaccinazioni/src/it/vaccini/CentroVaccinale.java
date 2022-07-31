@@ -36,6 +36,11 @@ public class CentroVaccinale {
 		return nome;
 	}
 	
+	public String getIndirizzo()
+	{
+		return this.indirizzo;
+	}
+	
 	public String toString()
 	{
 		return "[" + nome + " - " + indirizzo + "]";
