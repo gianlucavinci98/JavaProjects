@@ -17,7 +17,7 @@ public class Palindromo {
 	
 	public static int isPalindromo(int num)
 	{
-		int sum = Palindromo.somma(num);
+		int sum = Palindromo.sommaHard(num);
 		String s = String.valueOf(sum);
 		int i =0;
 		int j=s.length()-1;
@@ -48,6 +48,12 @@ public class Palindromo {
 		while(ris>0);
 		
 		return somma;
+	}
+	
+	void funzioneProva(int a, int b)
+	{
+		a+=2;
+		b+=2;
 	}
 	
 }

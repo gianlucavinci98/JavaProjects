@@ -6,7 +6,6 @@ public class ListaInteri {
 	private int cont;
 	
 	
-	
 	public ListaInteri() {
 		this.testa=null;
 		this.cont=0;

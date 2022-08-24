@@ -11,44 +11,75 @@ public class University {
 	public static final int MAX_STUDENTS_PER_COURSE = 100;
 	
 	// attributi
-
+	String uniName;
+	String rector;
+	
+	Student[] studenti;
+	int iscritti = INITIAL_ID;
+	
+	Corso[] corsi;
+	int numCorsi = INITIAL_CODE;
 	
 	public University(String name){
-
+		this.uniName = name;
+		studenti = new Student[MAX_STUDENTS];
+		corsi = new Corso[MAX_COURSES];
 	}
 	
 	public String getName(){
-		return null;
+		return this.uniName;
 	}
 	
 
 	public void setRector(String first, String last){
+		this.rector = first + " " + last;
 	}
 	
 
 	public String getRector(){
-		return null;
+		return rector;
 	}
 	
 
 	public int enroll(String first, String last){
-		return 0;
+		studenti[iscritti-INITIAL_ID]= new Student(first, last, iscritti);
+		return iscritti++;
 	}
 	
 
 	public String student(int id){
-
-		return null;
+		for (int i = 0; i<(iscritti-INITIAL_ID); i++)
+		{
+			if (studenti[i].getID()==id) return studenti[i].toString();
+		}
+		return "studente non trovato";
 	}
 	
+	public StringBuffer stampaStudenti()
+	{
+		StringBuffer str = new StringBuffer();
+		for (Student s : studenti)
+		{
+			if(s!=null)
+			{
+				str.append(s.toString() + "\n");
+			}
+		}
+		return str;
+	}
 
 	public int activate(String title, String teacher){
-		return 0;
+		corsi[numCorsi-INITIAL_CODE]= new Corso(title, teacher, numCorsi);
+		return numCorsi++;
 	}
 	
 
 	public String course(int code){
-		return null;
+		for (int i = 0; i<(numCorsi-INITIAL_CODE); i++)
+		{
+			if(corsi[i].getCode()==code) return corsi[i].toString();
+		}
+		return "corso non trovato";
 	}
 	
 	/**

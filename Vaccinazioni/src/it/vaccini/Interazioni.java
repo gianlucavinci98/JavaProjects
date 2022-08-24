@@ -1,5 +1,6 @@
 package it.vaccini;
 
+
 public class Interazioni {
 
 	public static void main(String[] args) {
@@ -23,8 +24,11 @@ public class Interazioni {
 		
 		System.out.println(sistema.getCittadini());
 		
+		
 		System.out.println(sistema.cittadiniAssociati("lingotto"));
 		System.out.println(sistema.cittadiniAssociati("cto"));
+		
+		
 	}
 
 }
