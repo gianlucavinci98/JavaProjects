@@ -88,6 +88,11 @@ public class University {
 	 * @param courseCode id of the course
 	 */
 	public void register(int studentID, int courseCode){
+		Student s = studenti[studentID-INITIAL_ID];
+		Corso c = corsi[courseCode-INITIAL_CODE];
+		s.addCorso(c);
+		c.addStud(s);
+		
 	}
 	
 	/**
@@ -97,7 +102,8 @@ public class University {
 	 * @return list of attendees separated by "\n"
 	 */
 	public String listAttendees(int courseCode){
-		return null;
+		Corso c = corsi[courseCode-INITIAL_CODE];
+		return c.getStudenti();
 	}
 
 	/**
@@ -107,7 +113,7 @@ public class University {
 	 * @return list of courses the student is registered for
 	 */
 	public String studyPlan(int studentID){
-
-		return null;
+		Student s = studenti[studentID-INITIAL_ID];
+		return s.getCorsi();
 	}
 }

@@ -26,16 +26,16 @@ public class ExampleApp {
 		int oop = poli.activate("Object Oriented Programming", "James Gosling");
 		
 		System.out.println("Activated courses " + poli.course(macro) + " and " + poli.course(oop)); // 10 and 11
-//		poli.register(s1, macro);
-//		poli.register(s2, macro);
-//		poli.register(s2, oop);
-//		
-//		System.out.println(poli.listAttendees(macro));
-//		// 10000 Mario Rossi
-//		// 10001 Giuseppe Verdi
-//		
-//		System.out.println(poli.studyPlan(s2));
-//		// 10,Macro Economics,Paul Krugman
-//		// 11,Object Oriented Programming,Marco Torchiano
+		poli.register(s1, macro);
+		poli.register(s2, macro);
+		poli.register(s2, oop);
+		
+		System.out.println(poli.listAttendees(macro));
+		// 10000 Mario Rossi
+		// 10001 Giuseppe Verdi
+		
+		System.out.println(poli.studyPlan(s2));
+		// 10,Macro Economics,Paul Krugman
+		// 11,Object Oriented Programming,Marco Torchiano
 	}
 }
